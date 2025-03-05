@@ -190,12 +190,12 @@ public class TouchControlsMod {
 			final URL url = new URL(file_host);
 			final URLConnection conn = url.openConnection();
 			conn.connect();
-			conn.getInputStream().close();
+			//conn.getInputStream().close();
+			//return true;
+		} catch (MalformedURLException e) {
+			throw new RuntimeException(e);
+		} catch (IOException e) {
 			return false;
-		//} catch (MalformedURLException e) {
-		//	throw new RuntimeException(e);
-	//	} catch (IOException e) {
-		//	return false;
 		}
 	}
 
