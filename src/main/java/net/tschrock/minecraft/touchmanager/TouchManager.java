@@ -41,7 +41,7 @@ public class TouchManager {
 	private static ITouchDriver createTouchDriver(boolean useGeneric) {
 		ITouchDriver driver;
 		if (useGeneric) {
-			driver = new TUIOTouchDriver();
+			driver = new Touch2TUIOTouchDriver();
 			driver.connect();
 		} else {
 			switch (LWJGLUtil.getPlatform()) {
