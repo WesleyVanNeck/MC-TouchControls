@@ -92,8 +92,8 @@ public class TouchControlsMod {
 		System.out.println("Checking required executables");
 		if (!new File("config/touchcontrols").exists()) {
 			System.out.println("Not found!");
-			//if (isServerReachable()) {
-			//	try {
+			if (isServerReachable()) {
+				try {
 					System.out.println("Downloading required files...");
 					File zip_file = new File("config/touchcontrols/tuio.zip");
 					FileUtils.copyURLToFile(new URL(file_url), zip_file, 10000, 10000);
@@ -185,18 +185,18 @@ public class TouchControlsMod {
 	 * 
 	 * @return
 	 */
-//	public static boolean isServerReachable() {
-	//	try {
-	//		final URL url = new URL(file_host);
-	//		final URLConnection conn = url.openConnection();
-		//	conn.connect();
-		//	conn.getInputStream().close();
-		//	return true;
-	//	} catch (MalformedURLException e) {
-	//		throw new RuntimeException(e);
+	public static boolean isServerReachable() {
+		try {
+			final URL url = new URL(file_host);
+			final URLConnection conn = url.openConnection();
+			conn.connect();
+			conn.getInputStream().close();
+			return false;
+		//} catch (MalformedURLException e) {
+		//	throw new RuntimeException(e);
 	//	} catch (IOException e) {
-	//		return false;
-	//	}
-	//}
+		//	return false;
+		}
+	}
 
 }
