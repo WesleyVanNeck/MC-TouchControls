@@ -29,11 +29,11 @@ public class Touch2TUIOTouchDriver extends TUIOTouchDriver {
         }
 
         if (is64bit) {
-            this.procDll = new BinRunner("config/touchcontrols/TouchHook_x64.dll");
-            this.procEx = new BinRunner("config/touchcontrols/Touch2Tuio_x64.exe", " Minecraft");
+            this.procDll = new BinRunner("bin/TouchHook.dll");
+            this.procEx = new BinRunner("bin/Touch2Tuio.exe", " Minecraft");
         } else {
-            this.procDll = new BinRunner("config/touchcontrols/TouchHook_x64.dll");
-            this.procEx = new BinRunner("config/touchcontrols/Touch2Tuio_x64.exe", " Minecraft");
+            this.procDll = new BinRunner("bin/TouchHook_x64.dll");
+            this.procEx = new BinRunner("bin/Touch2Tuio_x64.exe", " Minecraft");
         }
         System.out.println("Running Touch2Tuio" + (is64bit ? "_x64.exe" : ".exe"));
         this.proc = this.procEx.run();
