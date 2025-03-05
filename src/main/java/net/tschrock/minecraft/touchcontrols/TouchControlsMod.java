@@ -58,7 +58,7 @@ public class TouchControlsMod {
 	public static boolean config_customTuio = false;
 	public static boolean config_debug = false;
 
-	public static String file_host = "https://www.altillimity.com";
+	public static String file_host = "https://github.com/WesleyVanNeck/MC-TouchControls/releases/download/1.12.2";
 	public static String file_url = file_host + "/tuio.zip";
 
 	@EventHandler
